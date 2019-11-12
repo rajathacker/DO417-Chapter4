@@ -28,4 +28,8 @@
       path: C:\custom_share
       full: Administrator
       state: present
+  - name: Copying some custom content
+    win_copy:
+      content: "This is a shared content"
+      dest: C:\\custom_share\\shared.txt
 ...
