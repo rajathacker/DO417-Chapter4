@@ -1,6 +1,6 @@
 ---
 - name: Creating a simple playbook
-  hosts: all
+  hosts: ec2-15-206-166-250.ap-south-1.compute.amazonaws.com
   tasks:
   - name: IIS service installed
     win_feature:
