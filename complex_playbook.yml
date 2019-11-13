@@ -1,6 +1,6 @@
 ---
 - name: Creating a simple playbook
-  hosts: ec2-15-206-166-250.ap-south-1.compute.amazonaws.com
+  hosts: all
   tasks:
   - name: IIS service installed
     win_feature:
@@ -12,10 +12,10 @@
       state: started
   - name: Website index.html created
     win_copy:
-      content: "Hello World!"
+      content: "Page created by executing the complex playbook"
       dest: C:\Inetpub\wwwroot\index.html
 - name: This is second play
-  hosts: ec2-15-206-166-250.ap-south-1.compute.amazonaws.com
+  hosts: all
   tasks:
   - name: Creating a directory
     win_file:
